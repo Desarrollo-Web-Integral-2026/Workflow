@@ -1,6 +1,6 @@
 name: My First Push
 on:
-  push: 
+  pull_request: 
 
 jobs:
   Tarea1:
