@@ -5,8 +5,8 @@ on:
 jobs:
   Tarea1:
     runs-on: ubuntu-latest
-
-steps:
-  - name: Dí Hola
-    run: echo "Hello World"
+    
+    steps:
+      - name: Dí Hola
+      run: echo "Hello World Manuel"
     
