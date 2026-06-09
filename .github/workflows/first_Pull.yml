@@ -1,0 +1,22 @@
+name: My First Pull
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    
+jobs:
+  Tarea1:
+    runs-on: ubuntu-22.04
+    
+    steps:
+      - name: Datos del Pull Request
+        run: |
+          echo "Titulo:      ${{ github.event.pull_request.title }}"
+          echo "Contenido:   ${{ github.event.pull_request.body }}"
+          echo "Estado:      ${{ github.event.pull_request.state }}"
+          echo "Fusionado:   ${{ github.event.pull_request.merged }}"
+          echo "--- ORIGEN ---"
+          echo "Rama:        ${{ github.event.pull_request.head.ref }}"
+          echo "Repositorio: ${{ github.event.pull_request.head.repo.full_name }}"
+          echo "--- DESTINO ---"
+          echo "Rama:        ${{ github.event.pull_request.base.ref }}"
+          echo "Repositorio: ${{ github.event.pull_request.base.repo.full_name }}"
